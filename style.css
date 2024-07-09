@@ -1,0 +1,523 @@
+/* Reset styles */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(to right, f0f0f0);
+    color: #333;
+    box-sizing: border-box;
+}
+
+
+#language-switcher {
+    margin: 20px;
+}
+#language-switcher button {
+    padding: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+
+/* Navigation styles */
+.top-nav {
+    background-color: #3498db;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.top-nav ul li {
+    margin: 0 15px;
+}
+
+.top-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    color: #000000;
+}
+
+.top-nav ul li a:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #3498db;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column; /* Ensure items stack vertically */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav ul li {
+    margin: 10px 0;
+}
+
+.side-nav ul li a {
+    display: block;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.side-nav ul li a:hover {
+    background-color: #ff6f61;
+    color: white;
+}
+
+/* Scroll-to-top button styles */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4facfe;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 2000; /* กำหนดให้มีค่า z-index สูงกว่า */
+}
+
+#scroll-to-top:hover {
+    background-color: #ff6f61;
+    transform: scale(1.1);
+}
+#scroll-to-top i {
+    font-size: 20px;
+}
+
+/* Layout styles */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 100px 0;
+    /* background: linear-gradient(to right, #4facfe, #00f2fe); */
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    position: relative;
+    background-color: #2c3e50;
+
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+header img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Language switch styles */
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-switch button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.language-switch button:hover {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #34495e;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #3498db;
+    margin-right: 5px;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #ff6f61;
+}
+
+.breadcrumb span {
+    color: #4facfe;
+}
+
+.loading-icon {
+    margin-left: auto; /* ย้ายไอคอนไปไว้ทางขวา */
+    margin-right: 10px; /* ระยะห่างของไอคอน */
+}
+
+.loading-icon i {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Section styles */
+section {
+    margin: 20px 0;
+}
+
+section h3 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #4facfe;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #4facfe;
+    display: flex;
+    align-items: center;
+}
+
+section h3 i {
+    margin-right: 10px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* List styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f0f8ff;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 5px solid #4facfe;
+    transition: background 0.3s, transform 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+ul li:hover {
+    background: #4facfe;
+    color: #ffffff;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Chart Container */
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Card styles */
+.card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 250px;
+    top: -100%; /* Move the popup above the list item */
+    left: 50%;
+    transform: translateX(-50%); /* Center the popup horizontally */
+    opacity: 0;
+    transition: opacity 0.3s, top 0.3s;
+}
+
+ul li {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+ul li:hover .popup {
+    display: block;
+    opacity: 1;
+    top: -120%; /* Adjust the distance from the list item */
+}
+
+.popup strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.project-image {
+    width: 100%; /* ให้รูปภาพกว้างเต็มความกว้างของ parent element */
+    max-height: 500px; /* กำหนดความสูงสูงสุดของรูปภาพ */
+    object-fit: cover; /* ให้รูปภาพครอบคลุมพื้นที่โดยไม่บิดเบือน */
+}
+
+.swiper-container {
+    width: 100%;
+    height: 400px;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* กำหนดความสูงของ Swiper slide */
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* ให้รูปภาพครอบคลุมพื้นที่โดยไม่บิดเบือน */
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 2;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: draw 2s forwards;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2c3e50;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    position: relative;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffdf00;
+}
+
+/* Bubble animation styles */
+/* .bubbles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+} */
+
+
+/* .bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+.bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 20%;
+}
+
+.bubble:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 40%;
+    animation-duration: 25s;
+}
+
+.bubble:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    left: 60%;
+}
+
+.bubble:nth-child(4) {
+    width: 120px;
+    height: 120px;
+    left: 80%;
+    animation-duration: 30s;
+} */
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .top-nav ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .top-nav ul li {
+        margin: 10px 0;
+    }
+
+    .side-nav {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px 0;
+        border-radius: 0;
+    }
+
+    .side-nav ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .side-nav ul li {
+        margin: 0 10px;
+    }
+
+    .side-nav ul li a {
+        padding: 10px 20px;
+    }
+    header h1, header h2 {
+        font-size: 1.5em;
+    }
+
+    
+}
+@media (max-width: 480px) {
+    header h1, header h2 {
+        font-size: 1.2em;
+    }
+}
+
+/* @keyframes bubble-animation {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) scale(0);
+    }
+    50% {
+      transform: translate(0, -100px) scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0, -200px) scale(0);
+    }
+  } */
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        left: 50%;
+    }
+    50% {
+        left: 60%;
+    }
+    100% {
+        bottom: 100vh;
+        left: 70%;
+    }
+}
