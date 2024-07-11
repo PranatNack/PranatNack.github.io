@@ -9,8 +9,8 @@ const skillEn = document.getElementById("skills-en");
 const skillTh = document.getElementById("skills-th");
 const portEn = document.getElementById("portfolio-en");
 const portTh = document.getElementById("portfolio-th");
-const contEn = document.getElementById("contact-en");
-const contTh = document.getElementById("contact-th");
+const contEn = document.getElementById("contact-section-en");
+const contTh = document.getElementById("contact-section-th");
 const bubbles = document.querySelectorAll(".bubble");
 const tl = gsap.timeline({ repeat: -1 }); // ทำให้เคลื่อนไหววนไปเรื่อยๆ
 
